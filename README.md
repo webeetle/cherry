@@ -33,7 +33,7 @@ Fastify is a web framework highly focused on providing the best developer experi
 
 ## Using Knex
 
-Knex is a SQL query builder that can be used to build queries for different databases. It is used in this project to build queries for SQLite3 but it can be used for other SQL databases as well. To learn more about Knex, check out the [Knex documentation](http://knexjs.org/).
+Knex is a SQL query builder that can be used to build queries for different databases. It is used in this project to build queries for SQLite3, but it can be used for other SQL databases as well. To learn more about Knex, check out the [Knex documentation](http://knexjs.org/).
 
 ### Migration
 
