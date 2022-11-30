@@ -13,13 +13,19 @@ This project was born to be a scaffold for a new Node REST microservice. It is a
 
 - Clone this repository
 - Run `npm install` for install all dependencies
+- Run `npm run db:init` for create the database
+- Run `npm run dev` for start the server in development mode
+- Have fun 🎉
 
-## How to run
+## Commands available
 
 - Run `npm run dev` to start the server in development mode
 - Run `npm run start` to start the project in production mode
 - Run `npm run test` to run the tests
 - Run `npm run build` to build the project
+- Run `npm run db:init` to reset or create the database
+- Run `npm run db:migrate:latest` to run the latest migrations
+- Run `npm run db:migrate:reset` to rollback all the migrations
 
 ## Using Fastify
 
