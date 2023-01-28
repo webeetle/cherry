@@ -14,18 +14,24 @@ This project was born to be a scaffold for a new Node REST microservice. It is a
 - Clone this repository
 - Run `npm install` for install all dependencies
 - Run `npm run db:init` for create the database
-- Run `npm run dev` for start the server in development mode
+- Run `npm run start:dev` for start the server in development mode
 - Have fun 🎉
 
 ## Commands available
 
-- Run `npm run dev` to start the server in development mode
+- Run `npm run start:dev` to start the server in development mode
 - Run `npm run start` to start the project in production mode
 - Run `npm run test` to run the tests
-- Run `npm run build` to build the project
+- Run `npm run build:${env}` to build the project
 - Run `npm run db:init` to reset or create the database
 - Run `npm run db:migrate:latest` to run the latest migrations
 - Run `npm run db:migrate:reset` to rollback all the migrations
+
+env:
+
+- development
+- staging
+- production
 
 ## Using Fastify
 
@@ -42,3 +48,15 @@ To folders `migrations` and `seeds` are used to create the database and populate
 ## Using Tap
 
 Tap is a test framework for Node.js. It is used in this project to run the tests. To learn more about Tap, check out the [Tap documentation](https://node-tap.org/).
+
+## Docker
+
+Build docker image
+
+env:
+
+- development
+- staging
+- production
+
+`docker build --build-arg env=${env} -t cherry:latest -f Docker/Dockerfile .'
