@@ -38,6 +38,8 @@ COPY --from=production_deps /app/node_modules ./node_modules
 
 COPY --from=build /app/.env ./.env
 
+USER 1000
+
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["./dist/src/server.js"]
