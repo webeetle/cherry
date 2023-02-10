@@ -9,7 +9,7 @@
   "scripts": {
     "test": "npm run build:development && tsc -p test/tsconfig.json  &&  tap --ts \"test/**/*.test.ts\" --jobs=1",
     "start": "fastify start -l info dist/src/app.js",
-    "dev": "fastify start --ignore-watch=.ts$ -w -l info -P dist/src/app.js",
+    "dev": "fastify start --ignore-watch='.ts$ db.sqlite src' -w -l info -P dist/src/app.js",
     "start:dev": "npm run build:development && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"npm:watch\" \"npm:dev\"",
     "build:development": "cp .env.development .env && tsc && cp server.js dist/src/server.js",
     "build:staging": "cp .env.staging .env && tsc && cp server.js dist/src/server.js",
