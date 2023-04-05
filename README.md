@@ -6,6 +6,7 @@ This project was born to be a scaffold for a new Node REST microservice. It is a
 - Typescript 🔒
 - Fastify ⏩
 - OpenAPI docs ready 📖
+- JsonRPC server/client ready 📦
 - SQLite3 with Knex 🔧
 - Tap for tests 🧪
 
