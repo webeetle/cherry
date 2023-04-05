@@ -65,3 +65,5 @@ test/types/index.js
 
 # compiled app
 dist
+yarn.lock
+package-lock.json
