@@ -39,6 +39,13 @@ const app: FastifyPluginAsync<AppOptions> = async (
     options: opts
   })
 
+  // This loads all plugins defined in jrpc
+  // define your jrpc in one of these
+  void fastify.register(AutoLoad, {
+    dir: join(__dirname, 'application/jrpc'),
+    options: opts
+  })
+
 };
 
 export default app;
