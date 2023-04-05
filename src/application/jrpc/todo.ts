@@ -1,6 +1,7 @@
 import {FastifyPluginAsync} from "fastify"
 import {ToDoToInsert, ToDoToUpdate, sToDo, sToDoInsert, sToDoToUpdate} from "../../core/entities/todo/ToDo";
 import {deleteToDo, getAllTodos, getToDoById, insertToDo, updateToDo} from "../../core/usecases/todo/todoUseCases";
+import {CustomErrorResponse} from "@habeetat/jrpc-server/build/DTOs/errors";
 
 const jrpcExample: FastifyPluginAsync = async (fastify): Promise<void> => {
 
@@ -16,7 +17,8 @@ const jrpcExample: FastifyPluginAsync = async (fastify): Promise<void> => {
             }
         }
     }, () => {
-        return 'pong'
+        throw new CustomErrorResponse("errore", -1)
+        // return 'pong'
     });
 
     fastify.jrpc.addMethod({
@@ -102,7 +104,7 @@ const jrpcExample: FastifyPluginAsync = async (fastify): Promise<void> => {
             {
                 "name": "todo",
                 "description": "The todo to insert",
-                "schema": sToDoInsert
+                "schema": {...sToDoInsert}
             }
         ],
         "result": {
