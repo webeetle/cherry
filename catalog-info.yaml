@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: cherry
+  description: Simple scaffolding for Node REST microservice
+  tags:
+    - typescript
+spec:
+  type: service
