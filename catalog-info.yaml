@@ -1,10 +1,21 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
 metadata:
   name: cherry
+  title: cherry Node.js Template
   description: Simple scaffolding for Node REST microservice
-  tags:
-    - typescript
 spec:
+  owner: user:marco.ferraioli
   type: service
-  lifecycle: production
+  parameters:
+    - title: Fill in some steps
+      required:
+        - name
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Unique name of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
