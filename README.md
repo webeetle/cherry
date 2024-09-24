@@ -6,7 +6,7 @@ This project was born to be a scaffold for a new Node REST microservice. It is a
 - Typescript 🔒
 - Fastify ⏩
 - OpenAPI docs ready 📖
-- JsonRPC server/client ready 📦
+- JsonRPC app/client ready 📦
 - SQLite3 with Knex 🔧
 - Tap for tests 🧪
 
@@ -15,12 +15,12 @@ This project was born to be a scaffold for a new Node REST microservice. It is a
 - Clone this repository
 - Run `npm install` for install all dependencies
 - Run `npm run db:init` for create the database
-- Run `npm run start:dev` for start the server in development mode
+- Run `npm run start:dev` for start the app in development mode
 - Have fun 🎉
 
 ## Commands available
 
-- Run `npm run start:dev` to start the server in development mode
+- Run `npm run start:dev` to start the app in development mode
 - Run `npm run start` to start the project in production mode
 - Run `npm run test` to run the tests
 - Run `npm run build:${env}` to build the project

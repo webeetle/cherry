@@ -30,16 +30,16 @@ FROM gcr.io/distroless/nodejs18-debian11 AS release
 
 WORKDIR /app
 
-COPY --from=build /app/dist ./dist
+COPY --from=build /server/dist ./dist
 
-COPY --from=build /app/package.json ./package.json
+COPY --from=build /server/package.json ./package.json
 
-COPY --from=production_deps /app/node_modules ./node_modules
+COPY --from=production_deps /server/node_modules ./node_modules
 
-COPY --from=build /app/.env ./.env
+COPY --from=build /server/.env ./.env
 
 USER 1000
 
 EXPOSE 3000
 
-CMD ["./dist/src/server.js"]
+CMD ["./dist/src/app.js"]

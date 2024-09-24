@@ -7,7 +7,7 @@ export default fp(async (fastify) => {
   await fastify.register(fastifySwagger, {
     swagger: {
       info: {
-        title: 'Mio Catalog API',
+        title: 'Pitia Gateway API',
         description: '',
         version: '0.0.1'
       },
